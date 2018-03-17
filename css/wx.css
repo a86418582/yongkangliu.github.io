@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+html{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing:antialiased;
+}
+body{
+    text-align: center;
+    
+    width: 100%;
+    font-size: 1.2rem;
+    font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,sans-serif;
+    -webkit-text-size-adjust: none;
+}
+/*最外容器*/
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*高度占满*/
+    background: rgb(59, 58, 58);
+}
+/*内容*/
+.page .content{
+    flex:1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 80vh;
+    background:rgb(243, 243, 243);
+}
+.content{
+    -webkit-overflow-scrolling : touch;
+    -webkit-scrollbar:none;  
+}
+.header{
+   /* display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ 
+    display: -moz-box;  Firefox 17- 
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 
+    display: -moz-flex; /* Firefox 18+ 
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+    height: 8vh;
+    justify-content: flex-end;
+}
+.header *{
+    color: #fff;
+    
+}
+/*底部*/
+.footer{
+    overflow: hidden;
+    background: rgb(238, 234, 234);
+    height: 8vh;
+    line-height: 8vh;
+}
+.foot-nav{
+        display: flex;
+       
+        
+}
+.foot-nav *{
+    display: block;
+    flex:1;
+}
+/*头部信息数量*/
+.h-left{
+    font-size: 1.6rem;
+    width: 7rem;
+    line-height: 8vh;
+    letter-spacing: 0.2rem;
+   flex-grow: 1;
+   text-align: left;
+   margin-left: 2rem;
+
+}
+
+header img{
+    line-height: 8vh;
+    width: 15vw;
+    flex: none;
+}
+header img:hover{
+    background: rgb(0, 0, 0);
+}
+/*新闻、聊天信息*/
+.hot{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+/*头像*/
+.Avatar{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    flex:none;
+    background: cadetblue;
+    margin: 0.5rem 0.7rem;
+}
+/*聊天摘要*/
+.chatting{
+    flex-grow: 4;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+.title{
+    font-size:1.5rem;
+    width: 100%;
+   text-align: left;
+   font-weight: bold;
+   margin-top: 1.5vh;
+}
+.hot p{
+    height: 1.2rem; 
+    width: 65vw;
+    color: rgb(185, 179, 179);
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+time{
+   font:1rem;
+   line-height: 3vh;
+   color: rgb(185, 179, 179);
+   flex-grow: 1;
+   width: 20vw;
+   margin-top: 1vh;
+}

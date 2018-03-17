@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    #ctn {
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .tab1 {
+        width:100px;
+        height: 100px;
+        background: red;
+
+    }
+    .tab2 {
+        width:100px;        
+        height: 100px;
+       background: green;
+    }
+    .tab3 {
+        width:100px;        
+        height: 100px;
+       background: pink;
+    }
+</style>
+</head>
+<body>
+    <div id="ctn">
+        <div class="tab1">123</div>
+        <div class="tab2">456</div>
+        <div class="tab3"></div>   
+    </div>
+</body>
+<script>
+    // 以往，我们会用float布局，float布局不好的地方是，横向布局，和居中是在是太麻烦了。既要清除浮动，居中还有结合position等多种办法。
+    //相比较下，flex布局就简单的多。
+
+    // float布局，默认是由上往下排布，也就是，两个块，会从上右下，展开。如果说要让它脱离正常秩序，比如说，要tab2根tab1，横排在一起，那么就要用浮动.
+    // 假设我们要居中呢？让中间两个块，相对，#ctn居中。则可以使用margin 0 auto,实现水平。垂直则麻烦一些。垂直居中，旧方法是使用position，然后设置边界距离，都为0；
+
+    //前面说到，float布局，是上下，那么flex布局，则是相反。是横向排布的。使用flex很简单，只需要，在父元素的display属性，改成flex则可。下面的子元素，就都变成了flex布局。
+    // 设置了flex布局后，float属性，和clear both 就都失效了。
+</script>
+</html>
